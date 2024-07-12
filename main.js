@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const errorMessage = document.getElementById("errorMessage");
   const ideasList = document.getElementById("ideasList");
 
-  const tableCategory = ["Politique", "Économie", "Social", "Culture"];
+  const tableCategory = ["politique", "économie", "social", "culture"];
 
   let ideas = [];
 
