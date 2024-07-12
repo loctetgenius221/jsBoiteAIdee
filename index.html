@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajout d'une idée</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form id="ideaForm">
+          <h1>Ajout une idée</h1>
+          <label for="libelle">Libellé</label>
+          <input
+            type="text"
+            id="libelle"
+            name="libelle"
+            placeholder="Libellé"
+            required
+          />
+          <span class="error-message" id="libelleError"></span>
+          <label for="message">Message descriptif</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Entrez votre message ici..."
+            rows="5"
+            required
+          ></textarea>
+          <span class="error-message" id="messageError"></span>
+          <label for="category">Catégorie</label>
+          <select id="category" name="category" required>
+            <option value="">Sélectionnez une catégorie</option>
+            <option value="politique">Politique</option>
+            <option value="économie">Économie</option>
+            <option value="social">Social</option>
+            <option value="culture">Culture</option>
+          </select>
+          <span class="error-message" id="categoryError"></span>
+          <button type="submit">Ajouter</button>
+        </form>
+        <div id="confirmationMessage" style="display: none">
+          Votre idée a été ajoutée avec succès !
+        </div>
+        <div id="errorMessage" style="display: none; color: red">
+          Une erreur est survenue. Veuillez réessayer.
+        </div>
+      </div>
+      <div id="ideasList" class="ideas-list"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
